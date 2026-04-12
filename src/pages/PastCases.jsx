@@ -30,10 +30,11 @@ export default function PastCases() {
     const loading = status === 'loading';
 
     useEffect(() => {
-        if (userData?._id) {
-            dispatch(fetchGameplayHistory(userData._id));
+        const userId = userData?._id || userData?.id;
+        if (userId) {
+            dispatch(fetchGameplayHistory(userId.toString()));
         }
-    }, [dispatch, userData?._id]);
+    }, [dispatch, userData?._id, userData?.id]);
 
     const groupedByDate = useMemo(() => {
         const toKeyLabel = (createdAt) => {

@@ -12,8 +12,9 @@ export const fetchGameplayHistory = createAsyncThunk(
     'history/fetchGameplayHistory',
     async (userId, { getState, rejectWithValue }) => {
         try {
+            const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
             const res = await fetch(
-                `http://localhost:3002/api/gameplays/brief?userId=${encodeURIComponent(userId)}`
+                `${API_BASE}/api/gameplays/brief?userId=${encodeURIComponent(userId)}`
             );
             if (!res.ok) {
                 throw new Error('Failed to load past cases');

@@ -7,6 +7,7 @@ import App from './App'
 import './index.css'
 
 import { GoogleOAuthProvider } from '@react-oauth/google'
+import { Analytics } from '@vercel/analytics/react'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,5 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </BrowserRouter>
       </Provider>
     </GoogleOAuthProvider>
+    <Analytics />
   </React.StrictMode>,
 )

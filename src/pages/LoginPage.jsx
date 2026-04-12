@@ -41,7 +41,7 @@ export default function LoginPage() {
             alert('Google Login was unsuccessful. Please try again.');
         },
         flow: 'auth-code',
-        redirect_uri: 'http://localhost:5173',
+        redirect_uri: import.meta.env.VITE_REDIRECT_URI || 'http://localhost:5173',
     });
 
     return (
