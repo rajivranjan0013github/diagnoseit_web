@@ -130,7 +130,8 @@ const userSlice = createSlice({
             .addCase(submitCurrentGameplay.fulfilled, (state, action) => {
                 const user = action.payload.updatedUser;
                 if (user) {
-                    state.userData = user;
+                    // Merge into existing userData to preserve _id and other fields
+                    state.userData = { ...state.userData, ...user };
                     state.hearts = user.hearts ?? state.hearts;
                 }
             });

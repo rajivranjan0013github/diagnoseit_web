@@ -1,4 +1,8 @@
-export function AppStoreButtons() {
+export function AppStoreButtons({ light = false }) {
+  const btnClass = light
+    ? "flex items-center gap-3 bg-white text-gray-900 px-5 py-2.5 rounded-xl hover:bg-gray-100 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+    : "flex items-center gap-3 bg-black text-white px-5 py-2.5 rounded-xl hover:bg-gray-900 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+
   return (
     <div className="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
       {/* App Store Button */}
@@ -6,7 +10,7 @@ export function AppStoreButtons() {
         href="https://apps.apple.com/us/app/diagnose-it/id6755348303"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-3 bg-black text-white px-5 py-2.5 rounded-xl hover:bg-gray-900 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+        className={btnClass}
       >
         <AppleIcon className="w-7 h-7" />
         <div className="text-left">
@@ -20,7 +24,7 @@ export function AppStoreButtons() {
         href="https://play.google.com/store/apps/details?id=com.thousandways.gtd"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-3 bg-black text-white px-5 py-2.5 rounded-xl hover:bg-gray-900 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
+        className={btnClass}
       >
         <GooglePlayIcon className="w-7 h-7" />
         <div className="text-left">

@@ -4,19 +4,13 @@ import { useEffect, useState, useMemo, useRef } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { Markdown } from '@/components/Markdown';
 import {
-    ChevronLeft, ChevronRight, CheckCircle, AlertCircle, Info,
+    ChevronLeft, CheckCircle, AlertCircle, Info,
     FlaskConical, Stethoscope, Pill, ChevronDown,
     Lightbulb, Target, TestTube, CheckCircle2,
-    XCircle, Video, FileText, Download, RotateCcw, Home
+    XCircle
 } from 'lucide-react';
 import { cleanText } from '@/lib/utils';
 import { useAppSelector } from '@/store/hooks';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
-
-// PDF.js worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 /**
  * Animated number component for smooth score counting
@@ -135,115 +129,6 @@ const InsightSection = ({
     );
 };
 
-/**
- * Clean PDF Slide Viewer
- */
-function PdfSlideViewer({ url }) {
-    const [numPages, setNumPages] = useState(0);
-    const [pageNumber, setPageNumber] = useState(1);
-    const [isLoading, setIsLoading] = useState(true);
-    const containerRef = useRef(null);
-    const [containerWidth, setContainerWidth] = useState(600);
-
-    // In a real app, you might need a proxy. For now use direct URL or handled by server.
-    // Vite handles external URLs usually fine if CORS permits.
-    const finalUrl = url;
-
-    useEffect(() => {
-        const updateWidth = () => {
-            if (containerRef.current) {
-                setContainerWidth(containerRef.current.offsetWidth);
-            }
-        };
-        updateWidth();
-        window.addEventListener('resize', updateWidth);
-        return () => window.removeEventListener('resize', updateWidth);
-    }, []);
-
-    const onDocumentLoadSuccess = ({ numPages }) => {
-        setNumPages(numPages);
-        setIsLoading(false);
-    };
-
-    const goToPrevPage = () => setPageNumber(prev => Math.max(1, prev - 1));
-    const goToNextPage = () => setPageNumber(prev => Math.min(numPages, prev + 1));
-
-    return (
-        <div className="bg-white rounded-2xl shadow-sm border border-orange-100 mb-4 overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b border-orange-100 bg-orange-50">
-                <div className="flex items-center gap-3">
-                    <div className="p-2 bg-orange-500 rounded-lg">
-                        <FileText className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                        <h3 className="font-bold text-orange-800">Slide Deck</h3>
-                        <span className="text-xs text-orange-600">
-                            {isLoading ? 'Loading...' : `${pageNumber} / ${numPages}`}
-                        </span>
-                    </div>
-                </div>
-                <a
-                    href={url}
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-orange-100 hover:bg-orange-200 rounded-lg transition"
-                >
-                    <Download className="h-5 w-5 text-orange-600" />
-                </a>
-            </div>
-
-            <div ref={containerRef} className="relative bg-gray-100 h-[420px] overflow-hidden">
-                <button
-                    onClick={goToPrevPage}
-                    disabled={pageNumber <= 1}
-                    className={`absolute left-3 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white/90 shadow-lg border border-gray-200
-                        hover:bg-orange-50 hover:scale-105 transition-all duration-200
-                        ${pageNumber <= 1 ? 'opacity-30 cursor-not-allowed' : 'opacity-80 hover:opacity-100'}`}
-                >
-                    <ChevronLeft className="h-6 w-6 text-orange-600" />
-                </button>
-
-                <button
-                    onClick={goToNextPage}
-                    disabled={pageNumber >= numPages}
-                    className={`absolute right-3 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white/90 shadow-lg border border-gray-200
-                        hover:bg-orange-50 hover:scale-105 transition-all duration-200
-                        ${pageNumber >= numPages ? 'opacity-30 cursor-not-allowed' : 'opacity-80 hover:opacity-100'}`}
-                >
-                    <ChevronRight className="h-6 w-6 text-orange-600" />
-                </button>
-
-                <div className="flex justify-center items-center h-full">
-                    <Document
-                        file={finalUrl}
-                        onLoadSuccess={onDocumentLoadSuccess}
-                        loading={<div className="animate-spin rounded-full h-10 w-10 border-b-2 border-orange-500" />}
-                    >
-                        <Page
-                            pageNumber={pageNumber}
-                            width={containerWidth}
-                            renderTextLayer={false}
-                            renderAnnotationLayer={false}
-                        />
-                    </Document>
-                </div>
-            </div>
-
-            {numPages > 1 && (
-                <div className="flex justify-center items-center gap-2 h-12 bg-gray-50 border-t border-gray-100">
-                    {Array.from({ length: numPages }, (_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setPageNumber(i + 1)}
-                            className={`w-2.5 h-2.5 rounded-full transition-colors duration-200 ${pageNumber === i + 1 ? 'bg-orange-500' : 'bg-gray-300 hover:bg-orange-300'}`}
-                        />
-                    ))}
-                </div>
-            )}
-        </div>
-    );
-}
 
 export default function ClinicalInsightDetail() {
     const { id: gameplayId } = useParams();
@@ -461,33 +346,39 @@ export default function ClinicalInsightDetail() {
                 </InsightSection>
             )}
 
-            {caseData?.videooverview && (
-                <div className="bg-white rounded-2xl shadow-sm border border-purple-100 mb-4 overflow-hidden">
-                    <div className="flex items-center gap-3 p-4 bg-purple-50">
-                        <div className="p-2 bg-purple-500 rounded-lg"><Video className="h-5 w-5 text-white" /></div>
-                        <h3 className="font-bold text-purple-800">Video Overview</h3>
-                    </div>
-                    <div className="p-4"><video controls className="w-full rounded-xl bg-black aspect-video" src={caseData.videooverview} /></div>
-                </div>
-            )}
 
-            {caseData?.slidedeck && <PdfSlideViewer url={caseData.slidedeck} />}
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-6 mt-6 border-t border-gray-100">
-                <button
-                    onClick={() => navigate('/play')}
-                    className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-gray-100 py-4 font-semibold text-gray-700 transition hover:bg-gray-200"
-                >
-                    <Home className="h-5 w-5" /> Home
-                </button>
-                {gameplay?.caseId?._id && !gameplay.dailyChallengeId && (
-                    <button
-                        onClick={() => navigate(`/play/case/${gameplay.caseId._id}`)}
-                        className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 py-4 font-semibold text-white shadow-lg transition hover:shadow-xl"
+            <div className="pt-6 mt-6 border-t border-gray-100">
+                <p className="text-center text-sm text-gray-500 mb-4">Get a better experience on the app</p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.thousandways.gtd1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-3 rounded-xl bg-black py-3 px-4 transition hover:bg-gray-900"
                     >
-                        <RotateCcw className="h-5 w-5" /> Play Again
-                    </button>
-                )}
+                        <svg className="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="white">
+                            <path d="M3.18 23.76c.3.17.65.19.97.07l11.46-6.62-2.5-2.5-9.93 9.05zM.5 1.4C.19 1.73 0 2.24 0 2.9v18.2c0 .66.19 1.17.5 1.5l.08.07 10.2-10.2v-.24L.58 1.33.5 1.4zM20.1 10.4l-2.9-1.67-2.8 2.8 2.8 2.8 2.92-1.68c.83-.48.83-1.27-.02-1.75zM4.15.24L15.61 6.86l-2.5 2.5L3.18.31A1.04 1.04 0 014.15.24z"/>
+                        </svg>
+                        <div className="text-left">
+                            <p className="text-white/70 text-xs leading-none">GET IT ON</p>
+                            <p className="text-white font-semibold text-sm leading-tight">Google Play</p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://apps.apple.com/app/id6746632892"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-3 rounded-xl bg-black py-3 px-4 transition hover:bg-gray-900"
+                    >
+                        <svg className="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="white">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.18 1.27-2.16 3.8.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.78M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div className="text-left">
+                            <p className="text-white/70 text-xs leading-none">DOWNLOAD ON THE</p>
+                            <p className="text-white font-semibold text-sm leading-tight">App Store</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     );

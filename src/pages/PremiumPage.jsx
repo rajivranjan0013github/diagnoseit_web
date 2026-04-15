@@ -19,13 +19,10 @@ export default function PremiumPage() {
     const { userData, isPremium } = useAppSelector((state) => state.user);
 
     const features = useMemo(() => [
-        { label: 'Unlimited Cases', free: false, pro: true },
-        { label: 'Daily Challenges', free: true, pro: true },
-        { label: 'Past Daily Challenges', free: false, pro: true },
-        { label: 'Clinical Insights', free: false, pro: true },
-        { label: 'Detailed Feedback', free: false, pro: true },
-        { label: 'Clinical Images', free: false, pro: true },
-        { label: 'Ad-free Experience', free: false, pro: true },
+        { label: 'Access 250+ Full Cases', free: false, pro: true },
+        { label: 'Daily Challenges', free: false, pro: true },
+        { label: 'Full Clinical Insights', free: false, pro: true },
+        { label: 'Access 1000+ real images based diagnotics challenges (Available on app only)', free: false, pro: true },
     ], []);
 
     const premiumPlan = userData?.premiumPlan || null;
