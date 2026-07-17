@@ -55,7 +55,6 @@ const translations = {
                 preamble: "If you possess concerns or require further explanations regarding our Terms and Conditions, please contact:",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, India",
-                phone: "+91 9942000425",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -113,7 +112,6 @@ const translations = {
                 preamble: "Wenn Sie Bedenken haben oder weitere Erläuterungen zu unseren Geschäftsbedingungen benötigen, kontaktieren Sie uns bitte:",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, Indien",
-                phone: "+91 9942000425",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -171,7 +169,6 @@ const translations = {
                 preamble: "Si vous avez des préoccupations ou avez besoin d'explications supplémentaires concernant nos conditions générales, veuillez nous contacter :",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, Inde",
-                phone: "+91 9942000425",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -230,7 +227,63 @@ const translations = {
                 preamble: "Si tiene dudas o necesita más explicaciones sobre nuestros Términos y Condiciones, póngase en contacto con nosotros:",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, India",
-                phone: "+91 9942000425",
+                email: "admin@thethousandways.com"
+            }
+        ]
+    },
+    it: {
+        title: "Termini e",
+        subtitle: "Condizioni",
+        effectiveLabel: "Data di entrata in vigore",
+        date: "31 luglio 2025",
+        intro: "Diagnose It: Clinical Cases è gestito da Thousand Ways Private Limited. Benvenuto in Diagnose It: Clinical Cases. Accedendo o utilizzando la nostra app e i nostri servizi, accetti di essere vincolato dai presenti Termini e Condizioni.",
+        sections: [
+            {
+                title: "1. Idoneità",
+                text: "I nostri servizi sono destinati a persone che possono utilizzare l'app in modo responsabile. Devi essere in grado di stipulare accordi legalmente vincolanti per utilizzare i nostri servizi. Utilizzando l'app, dichiari di aver raggiunto l'età legale o di avere il consenso dei genitori, se richiesto."
+            },
+            {
+                title: "2. Account",
+                text: "Per accedere ai casi medici e ai punteggi, gli utenti devono creare un account accedendo tramite Google Sign-In. Sei responsabile del mantenimento della riservatezza delle tue credenziali di accesso e di tutte le attività che si verificano sotto il tuo account.",
+                subtext: "Se perdi l'accesso al tuo account e desideri la rimozione dei tuoi dati, contattaci all'indirizzo admin@thethousandways.com. Ci riserviamo il diritto di verificare la tua identità prima di elaborare tali richieste."
+            },
+            {
+                title: "3. Abbonamento e Pagamenti",
+                text: "I nostri servizi potrebbero richiedere un abbonamento a pagamento, gestito ed elaborato in modo sicuro tramite la fatturazione in-app di Apple App Store e Google Play Store. Utilizziamo RevenueCat per la gestione del ciclo di vita degli abbonamenti.",
+                extra: "Rimborsi, cancellazioni e rinnovi sono gestiti dai rispettivi app store in base ai loro termini standard e alle politiche di rimborso. Non abbiamo accesso diretto alla tua carta di credito o alle informazioni di pagamento."
+            },
+            {
+                title: "4. Attività Vietate",
+                text: "Accetti di non utilizzare la piattaforma in modo improprio. Le attività vietate includono, a titolo esemplificativo: accesso non autorizzato ai nostri sistemi, interferenza con la sicurezza del servizio, reverse engineering del codice dell'app o utilizzo del servizio per scopi illegali."
+            },
+            {
+                title: "5. Contenuti e Proprietà Intellettuale",
+                text: "Tutti i casi clinici, gli scenari medici, la logica diagnostica, i contenuti, i marchi e le immagini presenti su questa app sono di proprietà intellettuale di Thousand Ways Private Limited. La riproduzione, distribuzione o utilizzo commerciale senza l'espresso consenso scritto è severamente vietata.",
+                subtext: "Analizziamo i dati sull'utilizzo e le metriche sulle prestazioni in forma anonima per migliorare la precisione delle nostre simulazioni e offrire una migliore esperienza di apprendimento."
+            },
+            {
+                title: "6. Esclusione di Responsabilità Medica",
+                text: "IMPORTANTE: Questa app è uno strumento di simulazione didattica esclusivamente a scopo di apprendimento. I casi clinici, i sintomi e gli scenari sono esercizi di formazione virtuali e non costituiscono consulenza medica professionale, diagnosi o trattamento.",
+                extra: "Non siamo responsabili per eventuali decisioni cliniche prese nella pratica reale basate su questi contenuti educativi. Consulta sempre operatori sanitari qualificati e le linee guida mediche ufficiali per la diagnosi e il trattamento effettivi del paziente."
+            },
+            {
+                title: "7. Limitazione di Responsabilità",
+                text: "Nella misura massima consentita dalla legge, Thousand Ways Private Limited non sarà responsabile per eventuali danni diretti, indiretti, incidentali, speciali o consequenziali derivanti dall'uso o dall'impossibilità di utilizzare i nostri servizi."
+            },
+            {
+                title: "8. Risoluzione",
+                text: "Ci riserviamo il diritto di sospendere o interrompere il tuo accesso all'app a nostra esclusiva discrezione, senza preavviso, per comportamenti che riteniamo violino i presenti Termini o siano dannosi per altri utenti o per i nostri interessi commerciali."
+            },
+            {
+                title: "9. Modifiche ai Termini",
+                text: "Ci riserviamo il diritto di aggiornare o modificare i presenti Termini in qualsiasi momento. Modifiche significative verranno annunciate all'interno dell'app. L'uso continuato del servizio dopo la pubblicazione delle modifiche costituisce l'accettazione delle stesse."
+            },
+            {
+                title: "10. Contattaci",
+                type: "contact",
+                preamble: "In caso di dubbi o se richiedi ulteriori spiegazioni sui nostri Termini e Condizioni, ti preghiamo di contattarci:",
+                company: "Thousand Ways private limited",
+                address: "Dariyapur, Bodh Gaya, Bihar 824237, India",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -265,6 +318,7 @@ export default function TermsOfServicePage() {
                         <option value="de">Deutsch (DE)</option>
                         <option value="fr">Français (FR)</option>
                         <option value="es">Español (ES)</option>
+                        <option value="it">Italiano (IT)</option>
                     </select>
                 </div>
             </div>
@@ -312,7 +366,6 @@ export default function TermsOfServicePage() {
                                     <div className="space-y-3">
                                         <p className="text-foreground font-black uppercase text-sm tracking-widest">{section.company}</p>
                                         <p className="text-muted-foreground text-sm leading-relaxed">{section.address}</p>
-                                        <p className="text-muted-foreground text-sm font-bold">Phone: {section.phone}</p>
                                         <p className="text-muted-foreground text-sm">
                                             Email: <a href={`mailto:${section.email}`} className="text-primary font-bold hover:underline">{section.email}</a>
                                         </p>

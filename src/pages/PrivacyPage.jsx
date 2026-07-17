@@ -14,7 +14,7 @@ const translations = {
                 title: "1. Information We Collect",
                 list: [
                     { label: "Google Account Information", text: "When you log in via Google Sign-In, we collect your email address and basic profile details (such as your name) as permitted." },
-                    { label: "Usage Data", text: "We may collect anonymized data for analytics and performance monitoring." }
+                    { label: "Usage Data", text: "We collect anonymized usage statistics and interaction events via Firebase Analytics to monitor app performance and improve the user experience." }
                 ]
             },
             {
@@ -31,7 +31,7 @@ const translations = {
             },
             {
                 title: "5. Account Deletion",
-                text: "To request account deletion, please email us at admin@thethousandways.com from your logged-in email address. Include your request for account deletion in the email body.",
+                text: "To request account deletion, please email us at admin@thethousandways.com from your logged-in email address. Alternatively, you can delete your account and data directly within the app by going to the Profile section, clicking 'Edit', and selecting 'Delete Account'.",
                 subtext: "We will verify your identity using your logged-in email address and process your deletion request within 30 days. Upon deletion, all your personal data, including account information, will be permanently removed from our systems."
             },
             {
@@ -58,6 +58,7 @@ const translations = {
                 items: [
                     "RevenueCat – Subscription and purchase management.",
                     "Firebase Cloud Messaging – Push notifications.",
+                    "Firebase Analytics – App usage analytics and performance monitoring.",
                     "Google Sign-In – Authentication."
                 ],
                 footer: "These tools may collect certain non-personal technical information required for their services."
@@ -68,7 +69,6 @@ const translations = {
                 preamble: "If you possess concerns or require further explanations regarding our privacy habits, please contact:",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, India",
-                phone: "+91 9942000425",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -85,7 +85,7 @@ const translations = {
                 title: "1. Informationen, die wir sammeln",
                 list: [
                     { label: "Google-Kontoinformationen", text: "Wenn Sie sich über Google Sign-In anmelden, erfassen wir Ihre E-Mail-Adresse und grundlegende Profildetails (wie Ihren Namen), soweit zulässig." },
-                    { label: "Nutzungsdaten", text: "Wir können anonymisierte Daten für Analysen und Leistungsüberwachung sammeln." }
+                    { label: "Nutzungsdaten", text: "Wir erfassen anonymisierte Nutzungsstatistiken und Interaktionsdaten über Firebase Analytics, um die Leistung der App zu überwachen und das Nutzererlebnis zu verbessern." }
                 ]
             },
             {
@@ -102,7 +102,7 @@ const translations = {
             },
             {
                 title: "5. Kontolöschung",
-                text: "Um die Löschung Ihres Kontos zu beantragen, senden Sie uns bitte eine E-Mail an admin@thethousandways.com von Ihrer angemeldeten E-Mail-Adresse. Geben Sie Ihren Wunsch nach Kontolöschung im E-Mail-Text an.",
+                text: "Um die Löschung Ihres Kontos zu beantragen, senden Sie uns bitte eine E-Mail an admin@thethousandways.com von Ihrer angemeldeten E-Mail-Adresse. Alternativ können Sie Ihr Konto und Ihre Daten direkt in der App löschen, indem Sie zum Bereich 'Profil' gehen, auf 'Bearbeiten' klicken und 'Konto löschen' auswählen.",
                 subtext: "Wir werden Ihre Identität anhand Ihrer angemeldeten E-Mail-Adresse überprüfen und Ihre Löschanfrage innerhalb von 30 Tagen bearbeiten. Nach der Löschung werden alle Ihre persönlichen Daten, einschließlich der Kontoinformationen, dauerhaft aus unseren Systemen entfernt."
             },
             {
@@ -129,6 +129,7 @@ const translations = {
                 items: [
                     "RevenueCat – Abonnement- und Kaufverwaltung.",
                     "Firebase Cloud Messaging – Push-Benachrichtigungen.",
+                    "Firebase Analytics – Analyse der App-Nutzung und Leistungsüberwachung.",
                     "Google Sign-In – Authentifizierung."
                 ],
                 footer: "Diese Tools können bestimmte nicht-persönliche technische Informationen erfassen, die für ihre Dienste erforderlich sind."
@@ -139,7 +140,6 @@ const translations = {
                 preamble: "Wenn Sie Bedenken haben oder weitere Erläuterungen zu unseren Datenschutzpraktiken benötigen, kontaktieren Sie uns bitte:",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, Indien",
-                phone: "+91 9942000425",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -156,7 +156,7 @@ const translations = {
                 title: "1. Informations que nous collectons",
                 list: [
                     { label: "Informations du compte Google", text: "Lorsque vous vous connectez via Google Sign-In, nous collectons votre adresse e-mail et les détails de base de votre profil (tels que votre nom) comme autorisé." },
-                    { label: "Données d'utilisation", text: "Nous pouvons collecter des données anonymisées à des fins d'analyse et de suivi des performances." }
+                    { label: "Données d'utilisation", text: "Nous collectons des statistiques d'utilisation anonymisées et des événements d'interaction via Firebase Analytics pour suivre les performances de l'application et améliorer l'expérience utilisateur." }
                 ]
             },
             {
@@ -173,7 +173,7 @@ const translations = {
             },
             {
                 title: "5. Suppression de compte",
-                text: "Pour demander la suppression de votre compte, veuillez nous envoyer un e-mail à admin@thethousandways.com à partir de votre adresse e-mail connectée. Incluez votre demande de suppression de compte dans le corps de l'e-mail.",
+                text: "Pour demander la suppression de votre compte, veuillez nous envoyer un e-mail à admin@thethousandways.com à partir de votre adresse e-mail connectée. Alternativement, vous pouvez supprimer votre compte et vos données directement dans l'application en allant dans la section 'Profil', en cliquant sur 'Modifier', puis en sélectionnant 'Supprimer le compte'.",
                 subtext: "Nous vérifierons votre identité à l'aide de votre adresse e-mail connectée et traiterons votre demande de suppression dans un délai de 30 jours. Après la suppression, toutes vos données personnelles, y compris les informations de compte, seront définitivement supprimées de nos systèmes."
             },
             {
@@ -200,6 +200,7 @@ const translations = {
                 items: [
                     "RevenueCat – Gestion des abonnements et des achats.",
                     "Firebase Cloud Messaging – Notifications push.",
+                    "Firebase Analytics – Analyse de l'utilisation de l'application et suivi des performances.",
                     "Google Sign-In – Authentification."
                 ],
                 footer: "Ces outils peuvent collecter certaines informations techniques non personnelles requises pour leurs services."
@@ -210,7 +211,6 @@ const translations = {
                 preamble: "Si vous avez des préoccupations ou si vous avez besoin d'explications supplémentaires concernant nos pratiques en matière de confidentialité, veuillez nous contacter :",
                 company: "Thousand Ways private limited",
                 address: "Dariyapur, Bodh Gaya, Bihar 824237, Inde",
-                phone: "+91 9942000425",
                 email: "admin@thethousandways.com"
             }
         ]
@@ -227,7 +227,7 @@ const translations = {
                 title: "1. Información que recopilamos",
                 list: [
                     { label: "Información de la cuenta de Google", text: "Cuando inicia sesión a través de Google Sign-In, recopilamos su dirección de correo electrónico y detalles básicos del perfil (como su nombre) según lo permitido." },
-                    { label: "Datos de uso", text: "Podemos recopilar datos anonimizados para análisis y monitoreo del rendimiento." }
+                    { label: "Datos de uso", text: "Recopilamos estadísticas de uso anonimizadas y eventos de interacción a través de Firebase Analytics para monitorear el rendimiento de la aplicación y mejorar la experiencia del usuario." }
                 ]
             },
             {
@@ -244,7 +244,7 @@ const translations = {
             },
             {
                 title: "5. Eliminación de cuenta",
-                text: "Para solicitar la eliminación de su cuenta, envíenos un correo electrónico a admin@thethousandways.com desde su dirección de correo electrónico registrada. Incluya su solicitud de eliminación de cuenta en el cuerpo del mensaje.",
+                text: "Para solicitar la eliminación de su cuenta, envíenos un correo electrónico a admin@thethousandways.com desde su dirección de correo electrónico registrada. Alternativamente, puede eliminar su cuenta y sus datos directamente dentro de la aplicación yendo a la sección de 'Perfil', haciendo clic en 'Editar' y seleccionando 'Eliminar cuenta'.",
                 subtext: "Verificaremos su identidad utilizando su dirección de correo electrónico registrada y procesaremos su solicitud de eliminación en un plazo de 30 días. Tras la eliminación, todos sus datos personales, incluida la información de la cuenta, se eliminarán de forma permanente de nuestros sistemas."
             },
             {
@@ -271,6 +271,7 @@ const translations = {
                 items: [
                     "RevenueCat – Gestión de suscripciones y compras.",
                     "Firebase Cloud Messaging – Notificaciones push.",
+                    "Firebase Analytics – Análisis de uso de la aplicación y monitoreo del rendimiento.",
                     "Google Sign-In – Autenticación."
                 ],
                 footer: "Estas herramientas pueden recopilar cierta información técnica no personal requerida para sus servicios."
@@ -278,7 +279,81 @@ const translations = {
             {
                 title: "11. Contacto",
                 type: "contact",
-                preamble: "Si tiene alguna pregunta, comuníquese con nosotros en admin@thethousandways.com."
+                preamble: "Si tiene dudas o necesita más explicaciones sobre nuestras prácticas de privacidad, póngase en contacto con:",
+                company: "Thousand Ways private limited",
+                address: "Dariyapur, Bodh Gaya, Bihar 824237, India",
+                email: "admin@thethousandways.com"
+            }
+        ]
+    },
+    it: {
+        title: "Informativa sulla",
+        subtitle: "Privacy",
+        effectiveLabel: "Data di entrata in vigore",
+        updatedLabel: "Ultimo aggiornamento",
+        date: "31 luglio 2025",
+        intro: "Diagnose It: Clinical Cases è gestito da Thousand Ways Private Limited. Ci impegniamo a proteggere la tua privacy. Questa Informativa sulla Privacy descrive come raccogliamo, utilizziamo e proteggiamo le tue informazioni personali quando utilizzi la nostra app.",
+        sections: [
+            {
+                title: "1. Informazioni che raccogliamo",
+                list: [
+                    { label: "Informazioni sull'account Google", text: "Quando accedi tramite Google Sign-In, raccogliamo il tuo indirizzo email e i dettagli di base del profilo (come il tuo nome) come consentito." },
+                    { label: "Dati di utilizzo", text: "Raccogliamo statistiche sull'utilizzo e dati di interazione in modo anonimo tramite Firebase Analytics per monitorare le prestazioni dell'app e migliorare l'esperienza dell'utente." }
+                ]
+            },
+            {
+                title: "2. Come utilizziamo le tue informazioni",
+                items: ["Per consentirti di accedere in modo sicuro.", "Per migliorare e personalizzare la tua esperienza con l'app."]
+            },
+            {
+                title: "3. Conservazione dei dati",
+                text: "Tutti i dati sono memorizzati in modo sicuro sui nostri server o database. Non vendiamo né condividiamo le tue informazioni personali con terze parti."
+            },
+            {
+                title: "4. I tuoi diritti",
+                text: "Puoi richiedere di accedere, cancellare o esportare i tuoi dati inviandoci un'email all'indirizzo admin@thethousandways.com. Se non riesci ad accedere al tuo account, ti preghiamo di contattarci e verificheremo la tua identità prima di elaborare la tua richiesta."
+            },
+            {
+                title: "5. Cancellazione dell'account",
+                text: "Per richiedere la cancellazione dell'account, ti preghiamo di inviarci un'email all'indirizzo admin@thethousandways.com dall'indirizzo email con cui hai effettuato l'accesso. In alternativa, puoi eliminare il tuo account e i tuoi dati direttamente all'interno dell'app visitando la sezione 'Profilo', cliccando su 'Modifica' e selezionando 'Elimina account'.",
+                subtext: "Verificheremo la tua identità utilizzando l'indirizzo email di accesso ed elaboreremo la tua richiesta di cancellazione entro 30 giorni. Al momento della cancellazione, tutti i tuoi dati personali, comprese le informazioni sull'account, verranno rimossi in modo permanente dai nostri sistemi."
+            },
+            {
+                title: "6. Privacy dei minori",
+                text: "Non limitiamo l'uso in base all'età, ma raccomandiamo la supervisione per i minori di 13 anni laddove richiesto dalle leggi locali."
+            },
+            {
+                title: "7. Modifiche a questa informativa",
+                text: "Potremmo aggiornare periodicamente questa Informativa sulla Privacy. Le modifiche verranno pubblicate all'interno dell'app o sul nostro sito web con una data di entrata in vigore aggiornata."
+            },
+            {
+                title: "8. Acquisti In-App",
+                text1: "Offriamo acquisti in-app e abbonamenti che vengono elaborati in modo sicuro tramite la fatturazione di Google Play / Apple App Store e gestiti tramite RevenueCat. Non memorizziamo né abbiamo accesso ai dettagli completi del tuo pagamento, come i numeri delle carte di credito o di debito.",
+                text2: "RevenueCat potrebbe raccogliere informazioni relative alla cronologia degli acquisti (come lo stato dell'abbonamento o gli identificatori delle transazioni) per consentire la gestione degli abbonamenti e l'accesso alle funzionalità premium. Per ulteriori dettagli sulle pratiche relative alla privacy di RevenueCat, ti invitiamo a consultare la loro informativa sulla privacy sul loro sito web."
+            },
+            {
+                title: "9. Notifiche Push",
+                text1: "Utilizziamo Firebase Cloud Messaging (FCM) per inviare notifiche push relative ad aggiornamenti, promemoria o altre informazioni sull'app. Firebase può raccogliere identificatori a livello di dispositivo (come un token del dispositivo) necessari per recapitare le notifiche.",
+                text2: "Puoi disattivare le notifiche in qualsiasi momento tramite le impostazioni del tuo dispositivo. Non utilizziamo le notifiche per scopi di marketing senza il tuo consenso e non condividiamo i dati delle notifiche con terze parti."
+            },
+            {
+                title: "10. Fornitori di servizi di terze parti",
+                text: "Utilizziamo i seguenti strumenti di terze parti per supportare le funzionalità principali dell'app:",
+                items: [
+                    "RevenueCat – Gestione di abbonamenti e acquisti.",
+                    "Firebase Cloud Messaging – Notifiche push.",
+                    "Firebase Analytics – Analisi dell'utilizzo dell'app e monitoraggio delle prestazioni.",
+                    "Google Sign-In – Autenticazione."
+                ],
+                footer: "Questi strumenti possono raccogliere alcune informazioni tecniche non personali necessarie per i loro servizi."
+            },
+            {
+                title: "11. Contatti",
+                type: "contact",
+                preamble: "In caso di dubbi o se richiedi ulteriori spiegazioni in merito alle nostre pratiche sulla privacy, ti preghiamo di contattarci:",
+                company: "Thousand Ways private limited",
+                address: "Dariyapur, Bodh Gaya, Bihar 824237, India",
+                email: "admin@thethousandways.com"
             }
         ]
     }
@@ -312,6 +387,7 @@ export default function PrivacyPolicyPage() {
                         <option value="de">Deutsch (DE)</option>
                         <option value="fr">Français (FR)</option>
                         <option value="es">Español (ES)</option>
+                        <option value="it">Italiano (IT)</option>
                     </select>
                 </div>
             </div>
@@ -379,7 +455,6 @@ export default function PrivacyPolicyPage() {
                                     <div className="space-y-3">
                                         <p className="text-foreground font-black uppercase text-sm tracking-widest">{section.company}</p>
                                         <p className="text-muted-foreground text-sm leading-relaxed">{section.address}</p>
-                                        <p className="text-muted-foreground text-sm font-bold">Phone: {section.phone}</p>
                                         <p className="text-muted-foreground text-sm">
                                             Email: <a href={`mailto:${section.email}`} className="text-primary font-bold hover:underline">{section.email}</a>
                                         </p>
