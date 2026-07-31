@@ -31,6 +31,7 @@ import PremiumPage from './pages/PremiumPage';
 import FAQPage from './pages/FAQPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
+import PricingPage from './pages/PricingPage';
 
 // Other pages (stubs for now)
 
@@ -95,6 +96,8 @@ function App() {
       <Route path="/faq" element={<FAQPage />} />
       <Route path="/terms/:lang?" element={<TermsPage />} />
       <Route path="/privacy/:lang?" element={<PrivacyPage />} />
+      <Route path="/prcing" element={<PricingPage />} />
+      <Route path="/pricing" element={<PricingPage />} />
 
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />

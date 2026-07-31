@@ -52,12 +52,20 @@ export function HeroSection() {
             </div>
           </div>
 
-          <Link
-            to="/play"
-            className="group relative flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base font-bold text-white shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5"
-          >
-            Try on Web
-          </Link>
+          <nav className="flex items-center gap-2 sm:gap-4" aria-label="Main navigation">
+            <a
+              href="#pricing"
+              className="px-2 py-2 text-sm font-extrabold text-primary transition-colors hover:text-primary/75 sm:px-3 sm:text-base"
+            >
+              Pricing
+            </a>
+            <Link
+              to="/play"
+              className="group relative flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base font-bold text-white shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5"
+            >
+              Try on Web
+            </Link>
+          </nav>
         </div>
 
         <div className="flex flex-col items-center gap-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
