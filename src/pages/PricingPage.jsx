@@ -162,6 +162,7 @@ export function PricingSection() {
             <span className="flex items-center gap-1.5"><Check className="h-4 w-4 text-green-500" /> One account on every device</span>
             <Link to="/terms" className="transition hover:text-pink-500">Terms</Link>
             <Link to="/privacy" className="transition hover:text-pink-500">Privacy</Link>
+            <Link to="/refund" className="transition hover:text-pink-500">Refund Policy</Link>
           </div>
         </div>
       </section>

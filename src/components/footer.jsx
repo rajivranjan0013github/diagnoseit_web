@@ -68,9 +68,10 @@ export function Footer() {
         {/* Bottom copyright */}
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm font-medium">© 2025 Diagnose It. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             <Link to="/terms" className="text-gray-400 hover:text-pink-600 text-sm font-medium transition-colors">Terms</Link>
             <Link to="/privacy" className="text-gray-400 hover:text-pink-600 text-sm font-medium transition-colors">Privacy</Link>
+            <Link to="/refund" className="text-gray-400 hover:text-pink-600 text-sm font-medium transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>
