@@ -8,8 +8,7 @@ import { fetchDepartmentProgress } from '@/store/slices/progressSlice';
 import { fetchCategories } from '@/store/slices/categoriesSlice';
 import { cleanText } from '@/lib/utils';
 import Image from '@/components/Image';
-
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+import { API_BASE } from '@/config/api';
 
 // 1 hour expiration for suggested case
 const SUGGESTED_CASE_EXPIRY_MS = 60 * 60 * 1000;

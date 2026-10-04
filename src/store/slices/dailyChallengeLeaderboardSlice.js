@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { submitCurrentGameplay } from './gameSlice';
-
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+import { API_BASE } from '@/config/api';
 
 /**
  * Thunk: Fetch today's daily challenge leaderboard

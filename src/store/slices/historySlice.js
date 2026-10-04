@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE } from '@/config/api';
 
 const initialState = {
     items: [],
@@ -12,7 +13,6 @@ export const fetchGameplayHistory = createAsyncThunk(
     'history/fetchGameplayHistory',
     async (userId, { getState, rejectWithValue }) => {
         try {
-            const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
             const res = await fetch(
                 `${API_BASE}/api/gameplays/brief?userId=${encodeURIComponent(userId)}`
             );

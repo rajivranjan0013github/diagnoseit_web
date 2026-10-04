@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { cleanText } from '@/lib/utils';
 import { useAppSelector } from '@/store/hooks';
+import { API_BASE } from '@/config/api';
 
 /**
  * Animated number component for smooth score counting
@@ -148,8 +149,6 @@ export default function ClinicalInsightDetail() {
         treatment: false,
         whyOther: false,
     });
-
-    const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
 
     useEffect(() => {
         const fetchGameplay = async () => {

@@ -1,8 +1,8 @@
 // API client for Diagnose It backend
 // Backend running at localhost:3002
+import { API_BASE } from '@/config/api';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
-
+export { API_BASE };
 // Helper for fetch with error handling
 async function fetchAPI(endpoint, options) {
     const url = `${API_BASE}${endpoint}`;

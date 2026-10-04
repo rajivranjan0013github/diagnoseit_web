@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+import { API_BASE } from '@/config/api';
 
 // Thunk: load today's daily challenge
 export const loadTodaysChallenge = createAsyncThunk(
@@ -30,7 +29,8 @@ export const loadChallengeByDate = createAsyncThunk(
         // Get user's timezone
         const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-        const url = new URL(`${API_BASE}/api/daily-challenge/${date}`);
+        const baseOrigin = typeof window !== 'undefined' ? window.location.origin : 'http://localhost';
+        const url = new URL(`${API_BASE}/api/daily-challenge/${date}`, baseOrigin);
         url.searchParams.set('timezone', userTimezone);
         if (userId) url.searchParams.set('userId', userId);
 
