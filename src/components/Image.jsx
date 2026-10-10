@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Image = ({ src, alt, width, height, fill, className, priority, unoptimized, ...props }) => {
+const Image = ({ src, alt, width, height, fill, className, priority, ...props }) => {
     const style = fill
         ? {
             position: 'absolute',
@@ -23,6 +23,8 @@ const Image = ({ src, alt, width, height, fill, className, priority, unoptimized
             className={className}
             style={{ ...style, ...props.style }}
             loading={priority ? 'eager' : 'lazy'}
+            decoding={priority ? 'sync' : 'async'}
+            fetchPriority={priority ? 'high' : 'auto'}
             {...props}
         />
     );

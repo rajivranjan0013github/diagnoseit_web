@@ -35,7 +35,7 @@ export function HeroSection() {
             <div className="relative w-12 h-12 sm:w-16 sm:h-16">
               {/* Logo image */}
               <Image
-                src="/diagnose-it-logo.png"
+                src="/diagnose-it-logo.webp"
                 alt="Diagnose It logo"
                 fill
                 className="object-contain rounded-xl sm:rounded-2xl"
@@ -45,7 +45,7 @@ export function HeroSection() {
               <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl border border-border shadow-lg" />
             </div>
             <div className="block">
-              <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-primary/80 mb-0 sm:mb-1">
+              <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-pink-600 font-bold mb-0 sm:mb-1">
                 Interactive Clinical Puzzles
               </p>
               <h2 className="text-lg sm:text-2xl font-extrabold text-primary leading-tight">Diagnose It</h2>
@@ -55,13 +55,13 @@ export function HeroSection() {
           <nav className="flex items-center gap-2 sm:gap-4" aria-label="Main navigation">
             <a
               href="#pricing"
-              className="px-2 py-2 text-sm font-extrabold text-primary transition-colors hover:text-primary/75 sm:px-3 sm:text-base"
+              className="px-2 py-2 text-sm font-extrabold text-pink-600 transition-colors hover:text-pink-700 sm:px-3 sm:text-base"
             >
               Pricing
             </a>
             <Link
               to="/play"
-              className="group relative flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base font-bold text-white shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5"
+              className="group relative flex items-center justify-center gap-2 rounded-full bg-pink-600 px-4 py-1.5 sm:px-6 sm:py-2.5 text-sm sm:text-base font-bold text-white shadow-lg transition-all hover:bg-pink-700 hover:shadow-xl hover:-translate-y-0.5"
             >
               Try on Web
             </Link>

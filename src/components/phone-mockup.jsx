@@ -3,7 +3,7 @@
 import Image from "@/components/Image"
 import { useEffect, useState } from "react"
 
-const screenshots = ["/basic-info.png", "/basic-info1.png", "/basic-info2.png", "/basic-info3.png"]
+const screenshots = ["/basic-info.webp", "/basic-info1.webp", "/basic-info2.webp", "/basic-info3.webp"]
 
 export function PhoneMockup() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -28,7 +28,7 @@ export function PhoneMockup() {
           {/* Static background image */}
           <div className="absolute inset-0">
             <Image
-              src="/basic-info-bg.png"
+              src="/basic-info-bg.webp"
               alt="Diagnose It app background"
               fill
               className="object-cover"

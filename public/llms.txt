@@ -1,0 +1,23 @@
+# Diagnose It
+
+> Diagnose It is an interactive clinical puzzle game designed for medical students, residents, and healthcare professionals to master diagnostic reasoning and clinical decision-making.
+
+## Overview
+Diagnose It turns realistic patient encounters into engaging diagnostic puzzles. Work through patient history, vitals, physical exams, and diagnostic tests to reach the correct diagnosis and formulate appropriate treatment plans.
+
+## Core Capabilities
+- **Real Patient Cases**: 250+ cases across Cardiology, Neurology, Pulmonology, Gastroenterology, Endocrinology, Nephrology, Hematology, Rheumatology, Infectious Disease, and Emergency Medicine.
+- **Diagnostic Ordering**: Practice ordering appropriate labs, imaging, and procedures while avoiding unnecessary or wasteful testing.
+- **Clinical Reasoning**: Formulate differentials and targeted treatments with immediate clinical rationale feedback.
+- **Daily Challenges**: Daily cases for residency and exam preparation with global leaderboards.
+- **Clinical Insights**: Post-case breakdowns detailing key diagnostic clues and differential justifications.
+
+## Key Resources & Links
+- [Home Page](https://diagnoseit.in/): Platform overview, interactive features, and app download links.
+- [Web Application](https://diagnoseit.in/play): Launch the full interactive case solver on the web.
+- [Pricing](https://diagnoseit.in/pricing): Access options including weekly practice access ($5) and lifetime access ($15).
+- [FAQ](https://diagnoseit.in/faq): Frequently asked questions about cases, clinical reasoning methodology, and account access.
+- [Terms of Service](https://diagnoseit.in/terms): User agreement and terms.
+- [Privacy Policy](https://diagnoseit.in/privacy): Privacy policy and data handling practices.
+- [Refund Policy](https://diagnoseit.in/refund): Purchase and subscription refund guidelines.
+- [AI Resource Catalog](https://diagnoseit.in/.well-known/ai-catalog.json): Machine-readable capability catalog manifest.

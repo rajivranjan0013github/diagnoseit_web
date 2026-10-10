@@ -44,7 +44,7 @@ export function FeaturesSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-pink-500 mb-3">What You Get</span>
+          <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-pink-600 mb-3">What You Get</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Everything you need to become a better diagnostician
           </h2>

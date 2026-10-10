@@ -43,7 +43,7 @@ export function HowItWorksSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-pink-500 mb-3">The Gameplay Loop</span>
+          <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-pink-700 mb-3">The Gameplay Loop</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             How a case works
           </h2>
@@ -63,7 +63,7 @@ export function HowItWorksSection() {
               <div className={`relative z-10 w-12 h-12 rounded-2xl ${step.color} flex items-center justify-center shadow-md mb-4`}>
                 <step.icon className="w-5 w-5 text-white h-5" />
               </div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">{step.label}</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1">{step.label}</span>
               <h3 className="text-sm font-bold text-gray-900 mb-1 px-2">{step.title}</h3>
               <p className="text-xs text-gray-500 leading-relaxed px-3">{step.description}</p>
             </div>
@@ -78,7 +78,7 @@ export function HowItWorksSection() {
                 <step.icon className="w-5 h-5 text-white" />
               </div>
               <div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">{step.label}</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">{step.label}</span>
                 <h3 className="text-sm font-bold text-gray-900">{step.title}</h3>
                 <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{step.description}</p>
               </div>

@@ -1,0 +1,20 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Diagnose It",
+    "documentationUrl": "https://diagnoseit.in/faq"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:diagnoseit:medical:clinical-puzzle-solver",
+      "displayName": "Diagnose It Clinical Cases",
+      "type": "application/agent-card+json",
+      "url": "https://diagnoseit.in/agent-card.json",
+      "description": "Interactive clinical diagnosis puzzle game solving realistic patient scenarios.",
+      "representativeQueries": [
+        "solve realistic clinical patient cases",
+        "medical diagnosis training puzzle game"
+      ]
+    }
+  ]
+}

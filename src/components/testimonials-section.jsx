@@ -48,7 +48,7 @@ export function TestimonialsSection() {
       {/* Specialties Pills */}
       <section className="py-12 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-6">Cases Across Specialties</p>
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-6">Cases Across Specialties</p>
           <div className="flex flex-wrap justify-center gap-2">
             {specialties.map((s, i) => (
               <span key={i} className="px-4 py-1.5 rounded-full bg-white border border-gray-200 text-sm font-semibold text-gray-600 shadow-sm">
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-10">
-            <span className="text-xs font-black uppercase tracking-[0.2em] text-pink-500">What Users Say</span>
+            <span className="text-xs font-black uppercase tracking-[0.2em] text-pink-600">What Users Say</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((r, i) => (
@@ -76,7 +76,7 @@ export function TestimonialsSection() {
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed mb-4">"{r.quote}"</p>
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">{r.name}</p>
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">{r.name}</p>
               </div>
             ))}
           </div>

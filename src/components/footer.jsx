@@ -12,7 +12,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center border border-pink-50">
                 <Image
-                  src="/diagnose-it-logo.png"
+                  src="/diagnose-it-logo.webp"
                   alt="Diagnose It logo"
                   width={40}
                   height={40}
@@ -25,7 +25,7 @@ export function Footer() {
               Master the art of clinical diagnosis! Solve authentic patient scenarios, improve your decision-making, and learn medicine through interactive gameplay.
             </p>
             <div className="space-y-4">
-               <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Download current version</p>
+               <p className="text-xs font-black text-gray-500 uppercase tracking-widest">Download current version</p>
                <AppStoreButtons />
             </div>
           </div>
@@ -67,11 +67,11 @@ export function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm font-medium">© 2025 Diagnose It. All rights reserved.</p>
+          <p className="text-gray-500 text-sm font-medium">© 2025 Diagnose It. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/terms" className="text-gray-400 hover:text-pink-600 text-sm font-medium transition-colors">Terms</Link>
-            <Link to="/privacy" className="text-gray-400 hover:text-pink-600 text-sm font-medium transition-colors">Privacy</Link>
-            <Link to="/refund" className="text-gray-400 hover:text-pink-600 text-sm font-medium transition-colors">Refund Policy</Link>
+            <Link to="/terms" className="text-gray-500 hover:text-pink-600 text-sm font-medium transition-colors">Terms</Link>
+            <Link to="/privacy" className="text-gray-500 hover:text-pink-600 text-sm font-medium transition-colors">Privacy</Link>
+            <Link to="/refund" className="text-gray-500 hover:text-pink-600 text-sm font-medium transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>
